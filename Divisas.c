@@ -2,63 +2,65 @@
 #include <math.h>
 #include <stdlib.h>
 
-int main(){
-int opcion;
-float valor;
-
-printf("Marque con un numero la conversion que desea hacer:");
-
-printf("\n1. Convertir de dolar a euro ");
-
-printf("\n2. Convertir de euro a dolar ");
-
-printf("\n3. Convertir de peso a dolar ");
-
-scanf("%d", &opcion);
-
-switch (opcion)
-
+int main()
 {
+    int opcion;
+    float valor;
 
-case 1:
+    printf("Marque con un numero la conversion que desea hacer:");
 
-    printf("Ingrese valor (dolar a euro) ");
+    printf("\n 1.Convertir de dolar a euro: ");
 
-    scanf("%f", &valor);
+    printf("\n 2.Convertir de euro a dolar: ");
 
-    valor = valor * 0.732076;
+    printf("\n 3.Convertir de peso a dolar: ");
 
-    printf("El resultado es %f\n", valor);
+    printf("\n Seleccione: ");
 
-    break;
+    scanf("%d", &opcion);
 
-case 2:
+    switch (opcion)
 
-    printf("Ingrese valor (euro a dolar) ");
+    {
 
-    scanf("%f", &valor);
+    case 1:
 
-    valor = valor * 1.36602;
+        printf("Ingrese valor (dolar a euro) ");
 
-    printf("El resultado es %f\n", valor);
+        scanf("%f", &valor);
 
-    break;
+        valor = valor * 0.732076;
 
-case 3:
+        printf("El resultado es %f\n", valor);
 
-    printf("Ingrese valor (peso a dolar) ");
+        break;
 
-    scanf("%f", &valor);
+    case 2:
 
-    valor = valor * 0.0815380;
+        printf("Ingrese valor (euro a dolar) ");
 
-    printf("El resultado es %f\n", valor);
+        scanf("%f", &valor);
 
-default:
+        valor = valor * 1.36602;
 
-    printf("Salir");
-}
+        printf("El resultado es %f\n", valor);
 
-return 0;
+        break;
 
+    case 3:
+
+        printf("Ingrese valor (peso a dolar) ");
+
+        scanf("%f", &valor);
+
+        valor = valor * 0.0815380;
+
+        printf("El resultado es %f\n", valor);
+
+    default:
+
+        printf("Salir");
+    }
+
+    return 0;
 }
